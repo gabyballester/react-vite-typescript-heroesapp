@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IHeroe } from "../../../models/index";
+import { IHero } from "../../../models/index";
 
 interface ICharactersByHero {
   alterEgo: string;
@@ -17,9 +17,9 @@ export const HeroCard = ({
   alterEgo,
   firstAppearance,
   characters,
-}: IHeroe) => {
+}: IHero) => {
   const heroImg: string = `/assets/img/heroes/${id}.jpg`;
-  
+
   return (
     <div className="col animate__animated animate__fadeIn">
       <div className="card">

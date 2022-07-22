@@ -1,5 +1,5 @@
 import { heroes } from "../../../data/heores";
-import { IHeroe, Publisher } from "../../../models";
+import { IHero, Publisher } from "../../../models";
 
 export const getHeroesByPublisher = (publisher: Publisher) => {
   const validPublishers = [Publisher.DC, Publisher.MARVEL];
@@ -7,5 +7,5 @@ export const getHeroesByPublisher = (publisher: Publisher) => {
     throw new Error(`${publisher} is not a valid publisher`);
   }
 
-  return heroes.filter((heroe: IHeroe) => heroe.publisher === publisher);
+  return heroes.filter((heroe: IHero) => heroe.publisher === publisher);
 };

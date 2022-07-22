@@ -1,5 +1,5 @@
 import { getHeroesByPublisher } from "../helpers";
-import { Publisher, IHeroe } from '../../../models/index';
+import { Publisher, IHero } from "../../../models/index";
 import { HeroCard } from "./HeroCard";
 
 interface IHeroList {
@@ -11,7 +11,7 @@ export const HeroList = ({ publisher }: IHeroList) => {
 
   return (
     <div className="row rows-cols-1 row-cols-md-3 g-3">
-      {heroes.map((hero: IHeroe, index: number) => (
+      {heroes.map((hero: IHero, index: number) => (
         <HeroCard key={hero.id} {...hero} />
       ))}
     </div>
