@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IHero } from "../../../models/index";
+import { IHero } from "../../../common/models/index";
 
 interface ICharactersByHero {
   alterEgo: string;

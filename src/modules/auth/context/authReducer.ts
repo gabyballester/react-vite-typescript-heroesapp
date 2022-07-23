@@ -1,12 +1,20 @@
-import { types } from "../types/types";
+import { IUser } from '../../../common/models/index';
+import { type } from '../../auth';
 
-export const authReducer = (state: any, action: any) => {
+interface IAuthReducer{
+  logged: boolean;
+  user: IUser;
+}
+
+export const authReducer = (state: IAuthReducer, action: any) => {
   switch (action.type) {
-    case types.login:
-      return { ...state, logged: true, name: action.payload };
+    case type.login:
+      return { ...state, logged: true, user: action.payload };
 
-    case types.logout:
-      return { logged: false };
+    case type.logout:
+      console.log(state);
+    
+      return { ...state, logged: false, user: null };
 
     default:
       return state;

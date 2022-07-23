@@ -1,5 +1,5 @@
 import { getHeroesByPublisher } from "../helpers";
-import { Publisher, IHero } from "../../../models/index";
+import { Publisher, IHero } from "../../../common/models/index";
 import { HeroCard } from "./HeroCard";
 import { useMemo } from "react";
 
@@ -8,7 +8,11 @@ interface IHeroList {
 }
 
 export const HeroList = ({ publisher }: IHeroList) => {
-  const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
+  const validPublishers = [Publisher.DC, Publisher.MARVEL];
+  const heroes = useMemo(
+    () => getHeroesByPublisher(publisher, validPublishers),
+    [publisher]
+  );
 
   return (
     <div className="row rows-cols-1 row-cols-md-3 g-3">

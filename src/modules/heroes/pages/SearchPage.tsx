@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 
 import { HeroCard } from "../components";
-import { IHero } from "../../../models/index";
+import { IHero } from "../../../common/models/index";
 import { useForm } from "../../../common/hooks/useForm";
 import { getHeroesByName } from "../helpers";
 import { useEffect } from "react";

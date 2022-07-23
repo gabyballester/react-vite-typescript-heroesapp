@@ -1,4 +1,4 @@
-import { createContext, SetStateAction } from "react";
-import { IAuthContext } from "./AuthProvider";
+import { createContext } from "react";
+import { IAuthContext } from "../../../common/models";
 
 export const AuthContext = createContext({} as IAuthContext);

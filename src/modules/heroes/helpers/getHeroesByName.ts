@@ -1,5 +1,5 @@
-import { heroes } from "../../../data/heores";
-import { IHero } from "../../../models";
+import { heroes } from "../../../common/data/heores";
+import { IHero } from "../../../common/models";
 
 export const getHeroesByName = (name: any) => {
   if(typeof name !== 'string') return []

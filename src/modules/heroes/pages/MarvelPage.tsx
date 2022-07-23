@@ -1,5 +1,5 @@
 import { HeroList } from "../components";
-import { Publisher } from "../../../models";
+import { Publisher } from "../../../common/models";
 
 export const MarvelPage = () => {
   return (
