@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { IChildren } from "../common/models";
 import { AuthContext } from "../modules/auth";
 
-export const PublicRouter = ({ children }: IChildren) => {  
+export const PublicRoute = ({ children }: IChildren) => {
   const { logged } = useContext(AuthContext);
-  return logged ? <Navigate to={'/'} /> : <>{children}</>;
+  return logged ? <Navigate to={"/"} /> : <>{children}</>;
 };
