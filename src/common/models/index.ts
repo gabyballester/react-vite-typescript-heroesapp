@@ -32,4 +32,5 @@ export interface IChildren {
 
 export enum Key {
   user = "user",
+  lastPath = 'lastPath'
 }

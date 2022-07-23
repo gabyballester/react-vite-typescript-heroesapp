@@ -1,8 +1,11 @@
-import { Navigate, Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Key } from "../../../common/models";
 import { Navbar } from "../../../ui";
 import { DcPage, HeroPage, MarvelPage, SearchPage } from "../pages";
 
-export const HeroesRoutes = () => {  
+export const HeroesRoutes = () => {
+  const lastPath: string = localStorage.getItem(Key.lastPath) || "/";
+
   return (
     <>
       <Navbar />
@@ -14,7 +17,7 @@ export const HeroesRoutes = () => {
           <Route path="search" element={<SearchPage />} />
           <Route path="hero/:id" element={<HeroPage />} />
 
-          <Route path="/" element={<Navigate to='/marvel' />} />
+          <Route path="/" element={<Navigate to={lastPath} />} />
         </Routes>
       </div>
     </>
